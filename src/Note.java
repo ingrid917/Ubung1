@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Note {
     private int note;
 
+
     public Note(int note){
         this.note = note;
     }
@@ -15,4 +16,8 @@ public class Note {
         this.note = note;
     }
 
+    @Override
+    public String toString() {
+        return " Note: " + note;
+    }
 }
