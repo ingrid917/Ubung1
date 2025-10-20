@@ -1,15 +1,18 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Note {
-    private int grade;
+    private int note;
 
-    public Note(int grade){
-        this.grade = grade;
+    public Note(int note){
+        this.note = note;
     }
 
-    public int getGrade(){
-        return grade;
+    public int getNote(){
+        return note;
     }
-    public void setGrade(int grade){
-        this.grade = grade;
+    public void setNote(int note){
+        this.note = note;
     }
 
 }
