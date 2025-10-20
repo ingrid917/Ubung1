@@ -8,24 +8,30 @@ void main() {
     Note note4 = new Note(21);
     Note note5 = new Note(79);
     Note note6 = new Note(26);
-    Note note7 = new Note(34);
+    Note note7 = new Note(64);
     Note note8 = new Note(55);
     Note note9 = new Note(88);
     Note note10 = new Note(100);
 
     Note[] noten = {note1, note2, note3, note4, note5, note6, note7, note8, note9, note10};
     Katalog katalog = new Katalog(noten);
-//    System.out.println(katalog);
+    System.out.println("Die ursprungliche Array von Noten ist: ");
+    katalog.showArray(noten);
 
 //  Aufgabe 1
     Note[] nichtAusreichenderNote = katalog.NichtAusreichenderNote(noten);
+    System.out.println("Die Array mit nicht ausreichende Noten ist: ");
     katalog.showArray(nichtAusreichenderNote);
 
 //    Aufgabe 2
-    System.out.println(katalog.Durchschnittswerte(noten));
+    System.out.println("Die durchschnittswerte ist: " + katalog.Durchschnittswerte(noten));
 
 //    Aufgabe 3
+    Note[] result = katalog.AbgerundeteNote(noten);
+    System.out.println("Die Array mit abgerundeten Noten ist: ");
+    katalog.showArray(result);
 
-
-
+//    Aufgabe 4
+    int nr = katalog.MaxAbgerundeteNote(noten);
+    System.out.println("Die maximal abgerundete Note ist: " + nr);
 }
